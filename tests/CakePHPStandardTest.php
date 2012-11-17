@@ -17,7 +17,7 @@ class CakePHPStandardTest extends PHPUnit_Framework_TestCase {
 			PHPUnit_Framework_TestCase::fail("The dirname for the standard must be CakePHP");
 		}
 
-		$iterator = new RecursiveIteratorIterator(new RecursiveDirectoryIterator($standard . '/tests/files'));
+		$iterator = new RecursiveIteratorIterator(new RecursiveDirectoryIterator(dirname(__FILE__) . '/files'));
 		foreach ($iterator as $dir) {
 			if ($dir->isDir()) {
 				continue;
