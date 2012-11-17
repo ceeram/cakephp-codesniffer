@@ -13,9 +13,11 @@ class CakePHPStandardTest extends PHPUnit_Framework_TestCase {
 		$tests = array();
 
 		$standard = dirname(__DIR__);
+		var_dump(__DIR__);
+		var_dump(dirname(__FILE__));
+		var_dump(basename($standard));
+		var_dump($standard);
 		if (basename($standard) !== 'CakePHP') {
-			var_dump(basename($standard));
-			var_dump($standard);
 			PHPUnit_Framework_TestCase::fail("The dirname for the standard must be CakePHP");
 		}
 
